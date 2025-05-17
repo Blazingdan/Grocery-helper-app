@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Calendar } from '@/components/ui/calendar';
 import { MapPin, Calendar as CalendarIcon, UserPlus, ShoppingCart, List } from 'lucide-react';
 
-export function HomePage() {
+export default function HomePage() {
   const [location, setLocation] = useState('');
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [store, setStore] = useState('');
