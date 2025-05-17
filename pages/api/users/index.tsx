@@ -1,5 +1,6 @@
+// pages/index.tsx
 import React from 'react';
 
 export default function HomePage() {
-  return <div>Welcome to Grocery Helper</div>;
+  return <div>Hello world</div>;
 }
