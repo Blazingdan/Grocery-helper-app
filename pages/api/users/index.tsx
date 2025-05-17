@@ -121,8 +121,7 @@ export default function HomePage() {
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold mb-4">Get a helper now</h1>
       <p className="text-lg mb-6">
-        Need help with your grocery trip? Book a helper nearby to shop with you or
-        for you.
+        Need help with your grocery trip? Book a helper nearby to shop with you or for you.
       </p>
 
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mb-6">
@@ -182,10 +181,8 @@ export default function HomePage() {
               />
               {index === 0 && (
                 <div className="text-sm mt-1">
-                  Delivery: $5.00
-                  <br />
-                  Helper: $10.00
-                  <br />
+                  Delivery: $5.00<br />
+                  Helper: $10.00<br />
                   <strong>Total: ${calculateTotal().toFixed(2)}</strong>
                 </div>
               )}
@@ -207,3 +204,26 @@ export default function HomePage() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-xl font-bold">{helper.name}</h3>
+                    <p className="text-sm text-gray-600">Rating: {helper.rating}</p>
+                    <p className="text-sm text-gray-600">
+                      Phone:{' '}
+                      <a
+                        href={`tel:${helper.phone}`}
+                        className="text-blue-600 underline"
+                      >
+                        {helper.phone}
+                      </a>
+                    </p>
+                  </div>
+                  <Button>
+                    <UserPlus className="mr-2" size={16} />
+                    Book
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+      </div>
+    </div>
+  );
+}
