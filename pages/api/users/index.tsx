@@ -1,10 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Calendar } from '@/components/ui/calendar';
-import { MapPin, Calendar as CalendarIcon, UserPlus, ShoppingCart, List } from 'lucide-react';
-
 export default function HomePage() {
  import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
