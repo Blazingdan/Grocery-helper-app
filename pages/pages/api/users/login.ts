@@ -7,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { email, password } = req.body;
 
     // Dummy user check
-    if (email === 'test@example.com' && password === 'password') {
+    if (email === 'Blazingdan@gmail.com' && password === 'Blaze@123') {
       return res.status(200).json({ token: 'dummy-token-123' });
     }
 
