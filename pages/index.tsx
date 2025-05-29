@@ -70,7 +70,6 @@ export default function HomePage() {
     return itemTotal + deliveryFee + helperFee;
   };
 
-  // ✅ New improved auth block with full screen centering
   if (showAuth) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-50">
@@ -117,14 +116,18 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4">
-      <div className="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg">
         <h1 className="text-4xl font-bold mb-4">Rent a Grocery Helper</h1>
-        <p className="text-lg mb-6 text-gray-600">Need help with your grocery trip? Book a helper nearby to shop with you or for you.</p>
+        <p className="text-lg mb-6 text-gray-600">
+          Need help with your grocery trip? Book a helper nearby to shop with you or for you.
+        </p>
 
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 mb-6">
           <div>
-            <label className="flex items-center gap-2 mb-2 font-medium text-gray-700"><MapPin size={18}/>Location</label>
+            <label className="flex items-center gap-2 mb-2 font-medium text-gray-700">
+              <MapPin size={18} />Location
+            </label>
             <Input
               placeholder="Enter your city or zip code"
               value={location}
@@ -132,11 +135,15 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <label className="flex items-center gap-2 mb-2 font-medium text-gray-700"><CalendarIcon size={18}/>Date</label>
+            <label className="flex items-center gap-2 mb-2 font-medium text-gray-700">
+              <CalendarIcon size={18} />Date
+            </label>
             <Calendar selected={date} onSelect={setDate} />
           </div>
           <div className="md:col-span-2">
-            <label className="flex items-center gap-2 mb-2 font-medium text-gray-700"><ShoppingCart size={18}/>Preferred Grocery Store</label>
+            <label className="flex items-center gap-2 mb-2 font-medium text-gray-700">
+              <ShoppingCart size={18} />Preferred Grocery Store
+            </label>
             <Input
               placeholder="e.g. Walmart, Trader Joe's, Whole Foods"
               value={store}
@@ -146,7 +153,9 @@ export default function HomePage() {
         </div>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2"><List size={20}/>Shopping List</h2>
+          <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+            <List size={20} />Shopping List
+          </h2>
           {items.map((item, index) => (
             <div key={index} className="grid grid-cols-3 gap-4 mb-2">
               <Input
